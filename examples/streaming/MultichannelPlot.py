@@ -8,7 +8,8 @@ class MultichannelPlot(object):
         self.nchan = nchan
         self.xlen = xlen
         self.fig = plt.figure(figsize=(10,8))
-        self.axes = [self.fig.add_subplot(str(self.nchan) + '1' + str(i+1)) for i in range(self.nchan)]
+        #self.axes = [self.fig.add_subplot(str(self.nchan) + '1' + str(i+1)) for i in range(self.nchan)]
+        self.axes = [self.fig.add_subplot(self.nchan, 1, i + 1) for i in range(self.nchan)]
         for (i,ax) in enumerate(self.axes):
             plt.sca(ax)
             plt.ylabel('Ch.%d' % (i+1))
