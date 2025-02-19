@@ -12,7 +12,7 @@ EMG_SAMPLING_RATE = 200
 
 def main():
     # ================== setup myo-python (do not change) =====================
-    myo.init(sdk_path='../../myo_sdk') # Compile Python binding to Myo's API
+    myo.init(sdk_path='../../myo_sdk') # Compile Python binding to Myo's API - Add local path or else it gives error
     hub = myo.Hub() # Create a Python instance of MYO API
     if not ConnectionChecker().ok: # Check connection before starting acquisition:
         quit()
